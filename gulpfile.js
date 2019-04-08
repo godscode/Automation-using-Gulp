@@ -24,20 +24,21 @@ gulp.task('processHTML',(done)=> {
 //Processing and copying all javascript files to dist
 //LINTING THE CODE by making it compatible to older browser versions with Jshint
 //TRANSPILING THE CODE using Babel (DOESNT WORK!!!!!!!!!) ?
-//MINIFYING THE CODE using Uglify
+//MINIFYING THE CODE using Uglify   (DOESNT WORK!!!!!!!!!)
 gulp.task('processJS',(done)=> {
     gulp.src('src/*.js')                      //  ./**/Project*\\[*.*\\]/test/**/*.js
     .pipe(jshint({
         esversion : 8
     }))
     .pipe(jshint.reporter('default'))
-    
-   /** .pipe(babel({
+
+   /** 
+    .pipe(babel({
         presets : ['env']
     }))
     .pipe(uglify())
-     */
-
+    */
+    
     .pipe(gulp.dest('dist'));
     done();
 });

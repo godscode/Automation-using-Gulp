@@ -2,6 +2,7 @@ const newsLetterButton = document.getElementById('newsletter-button');
 const newsLetterSection = document.getElementById('newsletter-section');
 const newsLetterEmail = document.getElementById('newsletter-email');
 
+
 let sentEmail = false;
 
 newsLetterButton.addEventListener('click', () => {
